@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculator{
+    width: 380px;
+    background-color: green;
+    border-radius: 8px;
+    box-shadow: 0 0 10px(rgb(0, 0, 0.1));
+    padding: 20px;
+}
+
+#display{
+    width: 350px;
+    height: 50px;
+    background-color: beige;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    border-color: orange;
+    border-radius: 5px;
+    font-display: black;
+}
+
+.button{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.btn{
+    padding: 15px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.btn:active{
+    background-color: red;
+}
+
+.operator{
+    background-color: lightblue;
+}
+
+.operator:active{
+    background-color: white;
+}
+
+.clear{
+    grid-column: span 3;
+    background-color: black;
+    color: rgb(201, 122, 122);
+    width: 100%;
+}
+
+.clear:active{
+    background-color: rebeccapurple;
+
+}
+
+.teks-display {
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.icon {
+  width: 80px;
+  height: 40px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+  .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 6px 8px;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 100%; /* tampil di atas tombol */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+.tooltip:hover .tooltip-text,
+.tooltip:focus-within .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

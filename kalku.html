@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Seblak by Seblakjourney</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+         <p class="teks-display">YUK HITUNG KANDUNGAN GIZI SEBLAKMU!</p>
+        <input type="text" id="display" readonly>
+        <div class="button">
+            <div class="tooltip">
+            <button class="btn" onclick="addTopping(230, 7); appendValue('230');">
+                 <img src="kerupuk.png" alt="Kerupuk Seblak" class="icon">
+                    <span class="tooltip-text">Kerupuk Seblak</span>
+            </button>
+            </div>
+            <button class="btn" onclick="addTopping(100, 7); appendValue('100');">Mie 1/2 porsi</button>
+            <button class="btn" onclick="addTopping(75, 1); appendValue('75')">Telur</button>
+            <button class="btn" onclick="addTopping(28, 1); appendValue('28');">Bakso</button>
+            <button class="btn" onclick="addTopping(80, 1); appendValue('80');">Sosis</button>
+            <button class="btn" onclick="addTopping(35, 1); appendValue('35');">Dumpling</button>
+            <button class="btn" onclick="addTopping(55, 1); appendValue('55');">Dumpling keju</button>
+            <button class="btn" onclick="addTopping(59, 1); appendValue('59');">Ayam</button>
+            <button class="btn" onclick="addTopping(6, 1); appendValue('6');">Sayuran Hijau</button>
+            <button class="btn" onclick="addTopping(37, 1); appendValue('37');">Jamur Enoki</button>
+            <button class="btn" onclick="addTopping(13, 1); appendValue('13');">Cuanki Lidah</button>
+            <button class="btn" onclick="addTopping(48, 1); appendValue('48');">Otak-otak</button>
+            <button class="btn operator" onclick="appendValue('+')">+</button>
+            <button class="btn operator" onclick="calculate()">=</button>
+            <button class="btn operator" onclick="cleardisplay()">Reset</button>
+            <button class="btn operator" onclick="deleteLast()">Delete</button>
+
+        </div>
+    </div>
+
+   <script src="seblak.js"></script>
+</body>
+</html>
