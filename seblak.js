@@ -47,7 +47,6 @@ function calculate() {
             totalProtein += t.protein;
         });
 
-        // Kirim data ke result.html
        const query = `result=${encodeURIComponent(totalCalories)}&protein=${totalProtein}`;
 window.location.href = `result.html?${query}`;
 
@@ -57,9 +56,8 @@ window.location.href = `result.html?${query}`;
     }
 }
 
-const result = eval(display.value); // Hitung total kalori
+const result = eval(display.value);
 
-        // Hitung total protein dari selectedToppings
         let totalProtein = 0;
         selectedToppings.forEach(t => {
   totalCalories += t.calories;
