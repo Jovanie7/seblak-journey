@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Insani Bu';
+  src: url(fonts/Insanibu.ttf);
+}
+
+@font-face {
+  font-family: 'Abhaya Libre';
+  src: url(fonts/AbhayaLibre-Medium.ttf);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +15,8 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Abhaya Libre';
+  font-weight: 250;
   background: linear-gradient(135deg, #f8b500, #ff5722);
   color: #fff;
   display: flex;
@@ -76,7 +87,7 @@ button:hover {
 }
 
 .footer .logo {
-  width: 120px;
+  width: 200px;
   margin-bottom: 10px;
 }
 
@@ -118,6 +129,6 @@ button:hover {
     padding: 20px;
   }
   .footer .logo {
-    width: 100px;
+    width: 200px;
   }
 }

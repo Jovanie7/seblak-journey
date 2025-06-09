@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seblak Sehat – Berbagi Resep & Diskusi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="homepage.html">
+      <img src="logo.png" alt="SeblakJourney Logo" class="logo">
+    </a>
+    <h1 class="title">Seblak Sehat – Berbagi Resep</h1>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    
+    <!-- SECTION: FORM SUBMIT RESEP -->
+    <section class="submit-recipe">
+      <h2>Bagikan Resepmu</h2>
+      <form id="recipeForm">
+        <div class="form-group">
+          <label for="recipeName">Nama Resep:</label>
+          <input type="text" id="recipeName" placeholder="Contoh: Seblak Hijau Anti Lapar" required>
+        </div>
+
+        <div id="ingredientsContainer">
+          <h3>Bahan-bahan:</h3>
+          <!-- Container untuk baris input bahan -->
+        </div>
+        <button type="button" id="addIngredientBtn" class="btn add-btn">+ Tambah Bahan</button>
+
+        <div class="form-group totals">
+          <p>Total Kalori: <span id="totalCalories">0</span> kkal</p>
+          <p>Total Protein: <span id="totalProtein">0</span> gram</p>
+        </div>
+
+        <button type="submit" class="btn submit-btn">Kirim Resep</button>
+      </form>
+    </section>
+
+    <hr>
+
+    <!-- SECTION: DAFTAR RESEP -->
+    <section class="recipes-feed">
+      <h2>Resep Buatan Pengguna</h2>
+      <div id="recipesList">
+        <!-- Kartu resep akan di-render di sini -->
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

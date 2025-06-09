@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Seblak</title>
+    <link rel="stylesheet" href="seblakcalculator.css">
+</head>
+<body>
+
+<div class="header">
+  <a href="homepage.html">
+    <img src="logo new.png" alt="Seblak Journey Logo" class="logo">
+  </a>
+  <span class="title"><a href="homepage.html">Seblak Journey</a></span>
+</div>
+  <div class="calculator">
+    <p class="teks-display">YUK HITUNG KANDUNGAN GIZI SEBLAKMU!</p>
+    
+   <div class="display-row">
+    <div class="display-wrapper" style="flex-grow:1; position:relative;">
+           <button class="btn delete-btn" onclick="deleteLast()">⌫</button>
+     <div id="display" class="display-area"></div>
+    </div>
+  </div>
+
+    <div class="button">
+      <div class="tooltip">
+        <button class="btn" onclick="addTopping(230, 4, 'kerupuk.png'); appendValue('230');" >
+          <img src="kerupuk.png" alt="Kerupuk Seblak" class="icon">
+          <span class="tooltip-text">Kerupuk Seblak</span>
+        </button>
+      </div>
+      <div>
+
+        <div class="button">
+          <div class="tooltip">
+      <button class="btn" onclick="addTopping(100, 3, 'mie.png'); appendValue('100');">
+        <img src="mie.png" data-img="Mie Seblak" class="icon">
+         <span class="tooltip-text">Mie 1/2 porsi</span>
+    </button>
+    </div>
+    </div>
+     </div>
+
+     <div class="button">
+      <div class="tooltip">
+      <button class="btn" onclick="addTopping(75, 7, 'telur.png'); appendValue('75')">
+        <img src="telur.png" alt="Telur" class="icon">
+      <span class="tooltip-text">Telur 1 butir</span>
+      </button>
+      </div>
+    </div>
+
+      <button class="btn operator" onclick="cleardisplay()">Reset</button>
+
+      <div class="button">
+      <div class="tooltip">
+      <button class="btn" onclick="addTopping(28, 3, 'bakso.png'); appendValue('28');">
+        <img src="bakso.png" alt="Bakso" class="icon">
+        <span class="tooltip-text">Bakso 1 butir</span>
+      </button>
+      </div>
+      </div>
+
+
+      <div class="button">
+        <div class="tooltip">
+      <button class="btn" onclick="addTopping(80, 3, 'sosis.png'); appendValue('80');">
+        <img src="sosis.png" alt="Sosis Seblak" class="icon">
+        <span class="tooltip-text">Sosis 1 buah</span>
+      </button>
+      </div>
+      </div>
+      
+
+      <div class="button">
+      <div class="tooltip">
+      <button class="btn" onclick="addTopping(35, 4, 'dumpling.png'); appendValue('35');">
+      <img src="dumpling.png" alt="Dumpling" class="icon">
+        <span class="tooltip-text">Dumpling 1 butir</span> 
+      </button>
+      </div>
+      </div>
+
+<button class="btn operator plus" onclick="appendPlus()">+</button>
+
+      <div class="button">
+      <div class="tooltip">
+      <button class="btn" onclick="addTopping(35, 2, 'dumpling keju.png'); appendValue('55');">
+        <img src="dumpling keju.png" alt="Dumpling Keju" class="icon">
+        <span class="tooltip-text">Dumpling keju</span>
+      </button>
+      </div>
+      </div>
+
+      <div class="button">
+      <div class="tooltip">      
+      <button class="btn" onclick="addTopping(59, 8, 'ceker.png'); appendValue('59');">
+      <img src="ceker.png" alt="Ceker" class="icon">
+      <span class="tooltip-text">Ayam 100 gram</span>
+      </button>
+      </div>        
+      </div>
+      
+      <div class="button">
+        <div class="tooltip">
+      <button class="btn" onclick="addTopping(6, 2, 'sayur.png'); appendValue('6');">
+        <img src="sayur.png" alt="Sayur" class="icon">
+        <span class="tooltip-text">Sayuran Hijau</span>
+           </button>
+        </div>
+      </div>
+      
+      <button class="btn operator equal" onclick="calculate()">=</button>
+
+      <div class="button">
+        <div class="tooltip">
+      <button class="btn" onclick="addTopping(42, 3, 'enoki.png'); appendValue('37');">
+        <img src="enoki.png" alt="Enoki" class="icon">
+        <span class="tooltip-text">Jamur Enoki 1 bungkus</span>
+      </button>
+   </div>
+      </div>
+
+      <div class="button">
+        <div class="tooltip">
+      <button class="btn" onclick="addTopping(13, 1, 'cuanki.png'); appendValue('13');">
+        <img src="cuanki.png" alt="Cuanki" class="icon">
+        <span class="tooltip-text">Cuanki Lidah</span>
+      </button>    
+        </div>
+      </div>
+
+      <div class="button">
+      <div class="tooltip">
+      <button class="btn" onclick="addTopping(48, 1, 'otak-otak.png'); appendValue('48');">
+        <img src="otak-otak.png" alt="Otak-Otak Seblak" class="icon">
+        <span class="tooltip-text"> Otak-otak Singapore 1 buah</span>
+      </button>
+
+
+    </div>
+  </div>
+
+  <script src="seblakcalculator.js"></script>
+</body>

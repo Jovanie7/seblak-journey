@@ -1,0 +1,269 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column
+}
+
+body {
+  background-color: #FF6E28;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@font-face {
+    font-family: 'insanibu';
+    src: url(fonts/Insanibu.ttf);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Tambahkan ini agar header melebar penuh */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #fff; /* Tambahkan background agar tidak transparan */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo {
+  height: 100px; /* Ukuran logo dibuat proporsional dengan tinggi header */
+  width: auto;
+  margin-right: 10px;
+}
+
+.header .title {
+  font-family: 'Insanibu', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #FF6E28;
+  user-select: none;
+}
+
+main {
+  flex: 1;
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  margin-top: 100px;
+}
+
+header {
+  background-color: #f5f5f5;
+  color: #FF6E28;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.chat-bubble {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  margin: 20px 0;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.chat-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 30px;
+  border-width: 15px 15px 0;
+  border-style: solid;
+  border-color: #f5f5f5 transparent transparent;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease-out;
+}
+
+h2 {
+  color: #FF6E28;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #40b34d;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #369a41;
+}
+
+footer {
+  background-color: #f5f5f5;
+  color: #FF6E28;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+section#tim-kami {
+    background: url('foto-kelompok.jpg') center/cover no-repeat;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+  }
+
+  #tim-kami h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-shadow: 2px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 260px;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  }
+
+  .flip-card-front {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flip-card-front img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .flip-card-front p {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  .flip-card-back {
+    background-color: #333;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .flip-card-back h3 {
+    margin: 10px 0 5px;
+  }
+
+  .flip-card-back p {
+    margin: 5px 0;
+  }
+
+.header a{
+  text-decoration: none;
+  color: #FF6E28;
+}
+
+.foto-kelompok {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.interactive-image {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.interactive-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 100, 100, 0.3);
+}
+
+.glossy-effect {
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.7), 0 0 80px rgba(255, 150, 150, 0.5);
+  transform: scale(1.05);
+}

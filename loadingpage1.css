@@ -1,0 +1,108 @@
+  * {
+    box-sizing: border-box;
+  }
+
+  
+  @font-face {
+    font-family: 'Insanibu';
+    src: url(fonts/Insanibu.ttf);
+  }
+
+  body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    background: #f5f5f5;
+    font-family: 'Insanibu';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+
+ body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  font-family: 'Insanibu';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.loading-container {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  position: relative;
+}
+
+.loading-container img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 400;
+  color: #FF6E28;
+}
+
+.quote {
+  font-size: 16px;
+  color: #FF6E28;
+  padding: 0 16px;
+  line-height: 1.5;
+  max-width: 90%;
+  margin: 0 auto;
+  font-family: 'abrahalibre';
+  display: flex;
+}
+
+  .header .title {
+    font-family: 'Insanibu', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FF6E28;
+  
+  }
+
+  .loading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.dots {
+  font-size: 48px;
+  letter-spacing: 10px;
+  font-weight: bold;
+  user-select: none;
+  color: #FF6E28;
+  position: relative
+}
+
+.dot {
+  opacity: 0.2;
+  animation: blink 1.5s infinite;
+}
+
+.dot2 {
+  animation-delay: 0.2s;
+}
+.dot3 {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0.2; }
+  40% { opacity: 1; }
+}

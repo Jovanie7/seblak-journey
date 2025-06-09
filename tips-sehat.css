@@ -1,0 +1,860 @@
+
+
+
+@font-face {
+    font-family: 'Insani Bu';
+    src: url(fonts/Insanibu.ttf);
+}
+/* Reset dan font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Insani Bu'
+}
+
+body {
+  background-color: #FF6E28; /* Oranye terang sebagai background utama */
+  color: #f5f5f5; /* Teks abu-abu terang agar terbaca */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+h1 a{
+  font-family: 'Insani Bu';
+  color: #FF6E28;
+  margin: 0;
+  font-weight: 250px;
+}
+
+a {
+  text-decoration: none;
+  color: #FF6E28;
+}
+
+a:hover {
+  text-decoration: underline; /* opsional jika ingin efek hover */
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  background-color: #f5f5f5; /* Oranye hangat untuk header */
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  color: #FF6E28; /* Oranye terang untuk judul */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FF6E28; /* Oranye terang */
+  user-select: none;
+  font-family:'Insani Bu';
+}
+
+/* MAIN */
+main {
+  width: 90%;
+  max-width: 900px;
+  margin-top: 30px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f5f5f5; /* Oranye terang */
+  margin-bottom: 20px;
+  font-family: 'Insani Bu';
+  color: #f5f5f5;
+  border-bottom: 3px solid #40b34d; /* Hijau segar garis bawah */
+  padding-bottom: 5px;
+}
+
+/* Tips Section */
+.tips-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tip-card {
+  background-color: #f5f5f5; /* abu-abu terang */
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.tip-card h3 {
+  color: #e19840; /* Oranye hangat */
+  margin-bottom: 10px;
+}
+
+.tip-card p {
+  flex-grow: 1;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.tip-card a {
+  color: #40b34d; /* Hijau segar */
+  font-weight: 600;
+  text-decoration: none;
+  align-self: flex-start;
+  border: 2px solid #40b34d;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.tip-card a:hover {
+  background-color: #40b34d;
+  color: white;
+}
+
+
+/* Recipes Section */
+.recipe-card {
+  background-color: #fffbe6;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.recipe-card:hover {
+  transform: scale(1.02);
+}
+
+
+.recipe-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.recipe-modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #ffffff; /* putih bersih */
+  color: #333;       /* teks hitam */
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+}
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #FF6E28;
+  font-family: 'Insani Bu', sans-serif;
+}
+
+.recipe-card {
+  background: #ffffff;
+  border: 2px solid #ffb185;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-summary h3 {
+  margin: 0 0 5px;
+  font-size: 1.4rem;
+  color: #FF6E28;
+}
+
+.recipe-summary p {
+  margin: 4px 0;
+  color: #333;
+}
+
+.recipe-details {
+  display: none;
+  margin-top: 15px;
+  color: #111;
+}
+
+.recipe-details ul, .recipe-details ol {
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.recipe-details li {
+  margin-bottom: 5px;
+}
+
+/* Discussion Section */
+.discussion-section {
+  margin-top: 40px;
+  background-color: #f5f5f5; /* abu-abu terang */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Form input */
+#commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+#commentForm input,
+#commentForm textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 2px solid #40b34d; /* Hijau segar */
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+#commentForm input:focus,
+#commentForm textarea:focus {
+  outline: none;
+  border-color: #e19840; /* Oranye hangat */
+  box-shadow: 0 0 6px #e19840;
+}
+
+#commentForm button {
+  align-self: flex-start;
+  background-color: #40b34d; /* Hijau segar */
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#commentForm button:hover {
+  background-color: #e19840; /* Oranye hangat */
+}
+
+/* Comments container */
+#commentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Chat bubble style */
+.chat-bubble {
+  background-color: #FF6E28; /* Oranye terang */
+  color: white;
+  padding: 12px 16px;
+  border-radius: 20px 20px 20px 5px;
+  max-width: 70%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.chat-bubble strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #40b34d; /* Hijau segar */
+}
+
+.chat-bubble button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: #f5f5f5;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.chat-bubble button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .tips-container {
+    flex-direction: column;
+  }
+
+  .tip-card, .recipe-card {
+    max-width: 100%;
+  }
+
+  .chat-bubble {
+    max-width: 90%;
+  }
+}
+
+/* Reset dan font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #FF6E28; /* Oranye terang sebagai background utama */
+  color: #f5f5f5; /* Teks abu-abu terang agar terbaca */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  background-color: #f5f5f5; /* Oranye hangat untuk header */
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  color: #FF6E28; /* Oranye terang untuk judul */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.h1 .title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FF6E28; /* Oranye terang */
+  user-select: none;
+}
+
+/* MAIN */
+main {
+  width: 90%;
+  max-width: 900px;
+  margin-top: 30px;
+}
+
+h2.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #40b34d;
+  padding-bottom: 5px;
+  z-index: 1000;
+  font-weight: 250;
+}
+
+h2.discussion-title {
+  font-size: 1.6rem;
+  font-weight: 250;
+  color: #FF6E28; /* Oranye terang */
+  margin-bottom: 20px;
+  border-bottom: 3px solid #40b34d; /* Hijau segar garis bawah */
+  padding-bottom: 5px;
+  z-index: 1000;
+  font-family: 'Insani Bu';
+}
+
+
+.tips-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.tips-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.tips-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: calc(100% * 2); /* Asumsi 6 kartu, 3 per slide = 2 slide */
+}
+
+.tip-card {
+  flex: 0 0 calc(100% / 3);
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.prev-btn, .next-btn {
+  background-color: #40b34d;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: #FF6E28;
+}
+
+.prev-btn:disabled, .next-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+/* Recipes Section */
+.recipes-section {
+  margin-top: 40px;
+}
+
+.recipe-card {
+  background-color: #f5f5f5; /* abu-abu terang */
+  color: #333;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.recipe-card h3 {
+  color: #e19840; /* Oranye hangat */
+  margin-bottom: 8px;
+}
+
+.recipe-card p {
+  margin-bottom: 5px;
+}
+
+/* Discussion Section */
+.discussion-section {
+  margin-top: 40px;
+  background-color: #f5f5f5; /* abu-abu terang */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Form input */
+#commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+#commentForm input,
+#commentForm textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 2px solid #40b34d; /* Hijau segar */
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+#commentForm input:focus,
+#commentForm textarea:focus {
+  outline: none;
+  border-color: #FF6E28; /* Oranye hangat */
+  box-shadow: 0 0 6px #FF6E28;
+}
+
+#commentForm button {
+  align-self: flex-start;
+  background-color: #40b34d; /* Hijau segar */
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#commentForm button:hover {
+  background-color: #FF6E28; /* Oranye hangat */
+}
+
+/* Comments container */
+#commentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Chat bubble style */
+.chat-bubble {
+  background-color: #FF6E28; /* Oranye terang */
+  color: white;
+  padding: 12px 16px;
+  border-radius: 20px 20px 20px 5px;
+  max-width: 70%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.chat-bubble strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #40b34d; /* Hijau segar */
+}
+
+.chat-bubble button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: #f5f5f5;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.chat-bubble button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .tips-container {
+    flex-direction: column;
+  }
+
+  .tip-card, .recipe-card {
+    max-width: 100%;
+  }
+
+  .chat-bubble {
+    max-width: 90%;
+  }
+}
+/* Reset dan font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #FF6E28; /* Oranye terang sebagai background utama */
+  color: #f5f5f5; /* Teks abu-abu terang agar terbaca */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  background-color: FF6E28; /* Oranye hangat untuk header */
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  color: #FF6E28; /* Oranye terang untuk judul */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FF6E28; /* Oranye terang */
+  user-select: none;
+}
+
+/* MAIN */
+main {
+  width: 90%;
+  max-width: 900px;
+  margin-top: 30px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FF6E28; /* Oranye terang */
+  margin-bottom: 20px;
+  border-bottom: 3px solid #40b34d; /* Hijau segar garis bawah */
+  padding-bottom: 5px;
+}
+
+/* Tips Section */
+.tips-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tip-card {
+  background-color: #f5f5f5; /* abu-abu terang */
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.tip-card h3 {
+  color: #FF6E28; /* Oranye hangat */
+  margin-bottom: 10px;
+}
+
+.tip-card p {
+  flex-grow: 1;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.tip-card a {
+  color: #40b34d; /* Hijau segar */
+  font-weight: 600;
+  text-decoration: none;
+  align-self: flex-start;
+  border: 2px solid #40b34d;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.tip-card a:hover {
+  background-color: #40b34d;
+  color: white;
+}
+
+/* Recipes Section */
+.recipes-section {
+  margin-top: 40px;
+}
+
+.recipe-card {
+  background-color: #f5f5f5; /* abu-abu terang */
+  color: #333;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.recipe-card h3 {
+  color: #FF6E28; /* Oranye hangat */
+  margin-bottom: 8px;
+}
+
+.recipe-card p {
+  margin-bottom: 5px;
+}
+
+/* Discussion Section */
+.discussion-section {
+  margin-top: 40px;
+  background-color: #f5f5f5; /* abu-abu terang */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Form input */
+#commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+#commentForm input,
+#commentForm textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 2px solid #40b34d; /* Hijau segar */
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+#commentForm input:focus,
+#commentForm textarea:focus {
+  outline: none;
+  border-color: #FF6E28; /* Oranye hangat */
+  box-shadow: 0 0 6px #FF6E28;
+}
+
+#commentForm button {
+  align-self: flex-start;
+  background-color: #40b34d; /* Hijau segar */
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#commentForm button:hover {
+  background-color: #FF6E28; /* Oranye hangat */
+}
+
+/* Comments container */
+#commentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Chat bubble style */
+.chat-bubble {
+  background-color: #FF6E28; /* Oranye terang */
+  color: white;
+  padding: 12px 16px;
+  border-radius: 20px 20px 20px 5px;
+  max-width: 70%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.chat-bubble strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #40b34d; /* Hijau segar */
+}
+
+.chat-bubble button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: #f5f5f5;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.chat-bubble button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .tips-container {
+    flex-direction: column;
+  }
+
+  .tip-card, .recipe-card {
+    max-width: 100%;
+  }
+
+  .chat-bubble {
+    max-width: 90%;
+  }
+}
+
+
