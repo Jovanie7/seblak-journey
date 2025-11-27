@@ -1,27 +1,710 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WELCOME TO SEBLAKJOURNEY</title>
-     <link rel="stylesheet" href="style.css">
+    <title>D'Grent - Digital + Green + Internet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="logo-wrapper">
-  <div class="logo-container">
-    <img src="logo new.png" alt="mangkok" class="logo mangkok" />
-  </div>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1><img src="logo campaign.png" alt=""></h1>
+            <p>Disconnect you from the world...</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
 
-    <div class="title">SeblakJourney</div>
-    <div class="subtitle">Seblak itu seru. Tapi kamu harus tahu dulu apa yang kamu makan!</div>
-  </div>
+ <!-- Hero Section -->
+<section id="hero">
+    <div class="hero-content">
+        <div class="hero-title">
+            <div class="glitch-container"> <!-- TAMBAH INI -->
+                <img src="logo campaign.png" alt="Campaign Logo">
+            </div>
+        </div>
+        <p class="hero-subtitle">Digital + Green + Internet</p>
+        <p class="hero-description">Virus ini bukan menghancurkan, tapi menghidupkan kembali bumi <br><span class="highlight">Disconnect to Reconnect.</span></p>
+        <button id="explore-btn" class="cta-button">Jelajahi Kampanye</button>
+    </div>
+    <div class="scroll-indicator">
+        <span>Scroll untuk melanjutkan</span>
+        <div class="arrow"></div>
+    </div>
+</section>
 
-  <div class="swipe-up" onclick="window.location.href='loadingpage1.html'">
-  <span>Hitung kalori seblakmu di sini!</span>
-  <div class="arrow"></div>
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo"><a href="#hero"><img src="logo campaign.png" alt=""></a></div>
+            <ul class="nav-menu">
+                <li><a href="#visi">Visi</a></li>
+                <li><a href="#polusi">Polusi Digital</a></li>
+                <li><a href="#wall">Digital Wall</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Visi Kampanye Section -->
+    <section id="visi" class="section">
+        <div class="container">
+            <h2 class="section-title glitch-text" data-text="VISI KAMPANYE">Visi Kampanye</h2>
+            <div class="visi-content">
+                <div class="visi-text">
+                    <p><b>Kampanye ini berangkat dari meningkatnya aktivitas digital sehari-hari, khususnya di media sosial, yang sering kali dilakukan tanpa disadari dampak lingkungannya. </b>  Setiap unggahan, pencarian, streaming, penyimpanan data di cloud, hingga penggunaan layanan berbasis server jarak jauh membutuhkan energi yang besar, dan secara tidak langsung turut menyumbang jejak karbon digital. Ironisnya, sebagian besar konten yang dibagikan bersifat impulsif, berulang, atau kurang bermakna, hanya untuk mengejar validasi instan dan tren sesaat. <br><br>
+                        <b>Melalui kampanye ini, kami ingin mengajak generasi muda, khususnya Gen Z sebagai pengguna internet terbesar, untuk lebih sadar, reflektif, dan bijak dalam beraktivitas di dunia digital, termasuk dalam penggunaan layanan cloud yang sering diakses tanpa kontrol dan kesadaran penuh. </b>
+                    </p>
+                </div>
+                <div class="visi-visual">
+    <div class="earth-container">
+        <div class="earth">
+            <img src="earth.png" alt="">
+        </div>
+        <div class="data-streams">
+            <div class="stream"></div>
+            <div class="stream"></div>
+            <div class="stream"></div>
+        </div>
+    </div>
 </div>
 
-  <script src="new.js" defer></script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Polusi Digital Section -->
+
+<section id="polusi" class="section">
+    <div class="container">
+        <h2 class="section-title glitch" data-text="Bagaimana Polusi Digital Terjadi?">Bagaimana Polusi Digital Terjadi?</h2>
+        
+      <!-- Animasi Proses Digital ke Emisi -->
+<div class="process-animation">
+    <div class="process-container">
+
+        <!-- STEP 1 -->
+        <div class="process-step active">
+            <div class="step-visual">
+                <div class="phone-user">
+                    <div class="person">
+                        <div class="head"></div>
+                        <div class="body"></div>
+                        <div class="arm arm-left"></div>
+                        <div class="arm arm-right"></div>
+                    </div>
+                    <div class="phone">📱</div>
+                    <div class="social-icons">
+                        <span>📸</span>
+                        <span>🎵</span>
+                        <span>📹</span>
+                    </div>
+                </div>
+            </div>
+            <div class="step-label">Kegiatan Digital Sehari-hari</div>
+            <div class="step-arrow">➡️</div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="process-step">
+            <div class="step-visual">
+                <div class="wifi-transmission">
+                    <div class="wifi-waves">
+                        <div class="wave"></div>
+                        <div class="wave"></div>
+                        <div class="wave"></div>
+                    </div>
+                    <div class="data-icons">
+                        <span>📧</span>
+                        <span>🎬</span>
+                        <span>📁</span>
+                    </div>
+                </div>
+            </div>
+            <div class="step-label">Data Dikirim via Internet</div>
+            <div class="step-arrow">➡️</div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="process-step">
+            <div class="step-visual">
+                <div class="data-center">
+                    <div class="server-rack">
+                        <div class="server"></div>
+                        <div class="server"></div>
+                        <div class="server"></div>
+                    </div>
+                    <div class="cooling-fan">💨</div>
+                    <div class="data-flow">
+                        <span>0</span>
+                        <span>1</span>
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="step-label">Disimpan di Data Center</div>
+            <div class="step-arrow">➡️</div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="process-step">
+            <div class="step-visual">
+                <div class="power-plant">
+                    <div class="smoke">☁️☁️</div>
+                    <div class="power-lines">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="step-label">Butuh Listrik & Pendingin</div>
+            <div class="step-arrow">➡️</div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="process-step">
+            <div class="step-visual">
+                <div class="carbon-impact">
+                    <span>🌎</span>
+                    <span>🌡️</span>
+                    <span>💨</span>
+                </div>
+            </div>
+            <div class="step-label">Menghasilkan Emisi Karbon</div>
+            <!-- No arrow for last step -->
+        </div>
+
+    </div>
+
+    
+    <div class="process-stats">
+        <div class="stat-item">
+            <div class="stat-value">4g</div>
+            <div class="stat-label">CO₂ per email</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">100g</div>
+            <div class="stat-label">CO₂ per jam streaming</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">55g</div>
+            <div class="stat-label">CO₂ per jam video call</div>
+        </div>
+    </div>
+</div>
+
+       <!-- Polusi Digital Section - Updated Info Cards -->
+<section id="polusi" class="section">
+    <div class="container">
+        <h2 class="section-title glitch" data-text="Polusi Digital">Polusi Digital</h2>
+        
+        <!-- Updated Info Cards dengan Flip Animation -->
+        <div class="info-cards-enhanced">
+            <div class="info-card-wrapper">
+                <div class="info-card-flip">
+                    <div class="card-front">
+                        <div class="card-icon">💡</div>
+                        <h3>Apa itu Polusi Digital?</h3>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="stat-number">3.7%</span>
+                                <span class="stat-label">Emisi Global</span>
+                            </div>
+                        </div>
+                        <button class="flip-btn">Pelajari Lebih Lanjut →</button>
+                    </div>
+                    <div class="card-back">
+                        <h4>Detail Polusi Digital</h4>
+                        <p>Polusi digital yang berasal dari penggunaan internet, server, cloud, dan data center terjadi karena semua aktivitas online—seperti browsing, streaming, upload, download, hingga penyimpanan data—memerlukan server yang aktif 24 jam dan sistem pendingin yang sangat boros energi.
+
+Akibatnya, pada 2019 sektor digital menyumbang sekitar
+<strong> 3,7% emisi gas rumah kaca global, angka yang setara dengan industri penerbangan.</strong><br><br>
+Ini menunjukkan bahwa aktivitas online yang terlihat “tidak berasap” sebenarnya memiliki dampak besar terhadap lingkungan melalui jejak karbon digital yang tersembunyi di balik layar. </p>
+                        <button class="flip-back-btn">← Kembali</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card-wrapper">
+                <div class="info-card-flip">
+                    <div class="card-front">
+                        <div class="card-icon">📊</div>
+                        <h3>Fakta Menarik</h3>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="stat-number">416.2</span>
+                                <span class="stat-label">TWh/Tahun</span>
+                            </div>
+                        </div>
+                        <button class="flip-btn">Lihat Fakta Lain →</button>
+                    </div>
+                    <div class="card-back">
+                        <h4>Fakta Digital Lainnya</h4>
+                        <ul class="facts-list">
+                         <li><b>📧 1 Email = 4g CO₂ </b><br>
+→ Kalau 10 orang kirim 25 email/hari, dalam sehari sudah menghasilkan 1 kg CO₂ <br>
+→ Setara dengan emisi dari menyalakan AC ±8 jam</li>
+
+<li><b>📹 1 Jam Zoom = ±1000g CO₂ (1 kg CO₂) </b><br>
+→ Kalau 10 orang meeting Zoom 1 jam = 10 kg CO₂<br>
+→ Untuk menyerap 10 kg CO₂ dibutuhkan hampir setengah POHON dewasa selama 1 TAHUN</li>
+
+<li><b>🎬 1 Jam Netflix = 36g CO₂ (tergantung resolusi)</b> <br>
+→ Kalau 10 orang nonton 3 jam = 1.080g CO₂ (lebih dari 1 kg)<br>
+→ Sama dengan membakar hampir setengah liter bensin</li>
+
+<li><b>🌐 Data Center & Internet = ±340 TWh / tahun </b><br>
+→ Setara listrik untuk ±30 JUTA rumah selama 1 tahun<br>
+→ Membutuhkan ±13,6 JUTA pohon dewasa untuk menyerap emisinya per tahun<br>
+→ Semuanya hanya untuk menyimpan data, foto, video, dan aktivitas online kita</li>
+                        </ul>
+                        <button class="flip-back-btn">← Kembali</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card-wrapper">
+                <div class="info-card-flip">
+                    <div class="card-front">
+                        <div class="card-icon">🌍</div>
+                        <h3>Dampak ke Bumi</h3>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="stat-number"> ±340 TWh </span>
+                                <span class="stat-label">Konsumsi Listrik</span>
+                            </div>
+                        </div>
+                        <button class="flip-btn">Lihat Dampak →</button>
+                    </div>
+                    <div class="card-back">
+                        <h4>Dampak Global</h4>
+                        <p>Data center mengonsumsi <strong>1% listrik global</strong>. Jika internet adalah negara, <strong>konsumsi listriknya setara dengan gabungan Inggris dan Jerman.</strong></p>
+                        <div class="impact-meter">
+                            <div class="meter-label">Konsumsi Listrik Internet</div>
+                            <div class="meter-bar">
+                                <div class="meter-fill" style="width: 100%"></div>
+                            </div>
+                            <div class="meter-comparison">Setara dengan konsumsi listrik Inggris + Jerman</div>
+                        </div>
+                        <button class="flip-back-btn">← Kembali</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards tambahan untuk informasi lebih lengkap -->
+        <div class="additional-cards">
+            <div class="additional-card">
+                <div class="card-header">
+                    <div class="card-emoji">📧</div>
+                    <h4>Emisi Email Global</h4>
+                </div>
+                <div class="card-content">
+                    <div class="email-stats">
+                        <div class="email-stat">
+                            <span class="number">333</span>
+                            <span class="label">Miliar</span>
+                            <span class="description">Email dikirim setiap hari</span>
+                        </div>
+                        <div class="email-stat">
+                            <span class="number">410</span>
+                            <span class="label">Juta Ton</span>
+                            <span class="description">CO₂ per tahun dari email</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="additional-card">
+                <div class="card-header">
+                    <div class="card-emoji">🎬</div>
+                    <h4>Streaming Video</h4>
+                </div>
+                <div class="card-content">
+                    <div class="streaming-stats">
+                        <div class="streaming-item">
+                            <div class="platform">YouTube</div>
+                            <div class="emission">72 – 280 g CO₂/jam</div>
+                        </div>
+                        <div class="streaming-item">
+                            <div class="platform">Netflix</div>
+                            <div class="emission">30–400+g CO₂/jam (SD)</div>
+                        </div>
+                        <div class="streaming-item">
+                            <div class="platform">TikTok</div>
+                            <div class="emission">144 g CO₂/jam</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="additional-card">
+                <div class="card-header">
+                    <div class="card-emoji">☁️</div>
+                    <h4>Cloud Computing</h4>
+                </div>
+                <div class="card-content">
+                    <div class="cloud-stats">
+                        <div class="cloud-stat">
+                            <div class="label">Data Center</div>
+                            <div class="value">1% Listrik Global</div>
+                        </div>
+                        <div class="cloud-stat">
+                            <div class="label">Pertumbuhan</div>
+                            <div class="value">+15%/Tahun</div>
+                        </div>
+                        <div class="cloud-stat">
+                            <div class="label">Air untuk Pendingin</div>
+                            <div class="value">1.8L per kWh</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sisa section tetap sama -->
+        <!-- ... (process-animation, comparison-section, dll) ... -->
+    </div>
+</section>
+
+        <div id="nature-animation-container" style="display: none;">
+    <div class="nature-overlay">
+        <div class="nature-content">
+            <h2>Disconnect to Reconnect</h2>
+            <div class="nature-scene">
+                <!-- Sky and Background -->
+                <div class="sky"></div>
+                <div class="sun"></div>
+                <div class="clouds">
+                    <div class="cloud cloud1"></div>
+                    <div class="cloud cloud2"></div>
+                    <div class="cloud cloud3"></div>
+                </div>
+                
+                <!-- Ground -->
+                <div class="ground"></div>
+                
+                <!-- Growing Plants -->
+                <div class="plants-container">
+                    <div class="plant grass grass1"></div>
+                    <div class="plant grass grass2"></div>
+                    <div class="plant grass grass3"></div>
+                    <div class="plant flower flower1"></div>
+                    <div class="plant flower flower2"></div>
+                    <div class="plant tree tree1"></div>
+                    <div class="plant tree tree2"></div>
+                </div>
+                
+                <!-- Character Running -->
+                <div class="character-container">
+                    <div class="character">
+                        <div class="character-head"></div>
+                        <div class="character-body"></div>
+                        <div class="character-arm arm-left"></div>
+                        <div class="character-arm arm-right"></div>
+                        <div class="character-leg leg-left"></div>
+                        <div class="character-leg leg-right"></div>
+                    </div>
+                </div>
+                
+                <!-- Birds -->
+                <div class="birds">
+                    <div class="bird bird1">🕊️</div>
+                    <div class="bird bird2">🕊️</div>
+                </div>
+            </div>
+            <div class="nature-message">
+                <p>Dengan mengurangi aktivitas digital, kita memberi kesempatan pada alam untuk pulih</p>
+                <p>Langit kembali biru, udara menjadi bersih, dan bumi dapat bernapas lega</p>
+            </div>
+            <button id="close-nature" class="cta-button">Tutup</button>
+        </div>
+    </div>
+</div>
+
+        <!-- Perbandingan dengan Penerbangan -->
+        <div class="comparison-section">
+            <h3>Internet vs Penerbangan: Emisi Karbon Setara</h3>
+            <div class="comparison-container">
+                <div class="comparison-item">
+                    <div class="comparison-icon">✈️</div>
+                    <div class="comparison-content">
+                        <h4>Industri Penerbangan</h4>
+                        <p>2.5% emisi CO₂ global</p>
+                        <div class="emission-bar">
+                            <div class="emission-fill aviation"></div>
+                        </div>
+                        <span>920 juta ton CO₂/tahun</span>
+                    </div>
+                </div>
+                <div class="vs-text">VS</div>
+                <div class="comparison-item">
+                    <div class="comparison-icon">🌐</div>
+                    <div class="comparison-content">
+                        <h4>Digital Ecosystem</h4>
+                        <p>~1,5-4% emisi CO₂ global</p>
+                        <div class="emission-bar">
+                            <div class="emission-fill digital"></div>
+                        </div>
+                        <span>1.4 miliar ton CO₂/tahun</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Chart Interaktif yang Diperbarui -->
+<div class="interactive-chart">
+    <h3>Emisi Karbon dari Aktivitas Digital</h3>
+    <div class="chart-controls">
+        <div class="control-group">
+            <label>Satuan Waktu:</label>
+            <div class="time-buttons">
+                <button class="time-btn active" data-multiplier="1">Per Jam</button>
+                <button class="time-btn" data-multiplier="24">Per Hari</button>
+                <button class="time-btn" data-multiplier="168">Per Minggu</button>
+            </div>
+        </div>
+        <div class="control-group">
+            <label>Perbandingan:</label>
+            <select id="comparison-select">
+                <option value="none">Tidak ada</option>
+                <option value="car">Mobil (240g CO₂/km)</option>
+                <option value="tree">Pohon (21kg CO₂/tahun)</option>
+                <option value="flight">Penerbangan (90kg CO₂/jam)</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="chart-container">
+        <div class="chart-bar" data-value="4" data-label="Email (1 pesan)">
+            <div class="bar-label">Email</div>
+            <div class="bar-wrapper">
+                <div class="bar"></div>
+                <div class="bar-hover">Klik untuk info</div>
+            </div>
+            <div class="bar-value">4g CO₂</div>
+        </div>
+        <div class="chart-bar" data-value="1000" data-label="Video Call">
+            <div class="bar-label">Video Call</div>
+            <div class="bar-wrapper">
+                <div class="bar"></div>
+                <div class="bar-hover">Klik untuk info</div>
+            </div>
+            <div class="bar-value">55g CO₂</div>
+        </div>
+        <div class="chart-bar" data-value="36" data-label="Streaming Video (SD)">
+            <div class="bar-label">Streaming SD</div>
+            <div class="bar-wrapper">
+                <div class="bar"></div>
+                <div class="bar-hover">Klik untuk info</div>
+            </div>
+            <div class="bar-value">100g CO₂</div>
+        </div>
+        <div class="chart-bar" data-value="1600" data-label="Streaming Video (HD)">
+            <div class="bar-label">Streaming HD</div>
+            <div class="bar-wrapper">
+                <div class="bar"></div>
+                <div class="bar-hover">Klik untuk info</div>
+            </div>
+            <div class="bar-value">200g CO₂</div>
+        </div>
+        <div class="chart-bar" data-value="60" data-label="Gaming Online">
+            <div class="bar-label">Gaming Online</div>
+            <div class="bar-wrapper">
+                <div class="bar"></div>
+                <div class="bar-hover">Klik untuk info</div>
+            </div>
+            <div class="bar-value">60g CO₂</div>
+        </div>
+    </div>
+    
+    <div class="chart-info">
+        <div id="chart-tooltip" class="chart-tooltip">
+            <div class="tooltip-content">
+                <h4 id="tooltip-title">Pilih Aktivitas</h4>
+                <p id="tooltip-desc">Klik pada salah satu bar chart untuk melihat detail</p>
+                <div id="tooltip-comparison" class="tooltip-comparison"></div>
+            </div>
+        </div>
+        
+        <div class="chart-legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(to top, var(--green), var(--blue));"></div>
+                <span>Emisi Karbon Digital</span>
+            </div>
+            <div class="legend-item comparison-legend" style="display: none;">
+                <div class="legend-color" style="background: var(--yellow);"></div>
+                <span id="comparison-legend-text">Perbandingan</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Dampak Emisi Karbon -->
+        <div class="impact-section">
+            <h3>Dampak Emisi Karbon dari Aktivitas Digital</h3>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-icon">🌡️</div>
+                    <h4>Pemanasan Global</h4>
+                    <p>Emisi CO₂ dari internet berkontribusi pada kenaikan suhu global 1.5°C</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon">🧊</div>
+                    <h4>Mencairnya Es</h4>
+                    <p>Pemanasan global menyebabkan es di kutub mencair lebih cepat</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon">🔥</div>
+                    <h4>Cuaca Ekstrem</h4>
+                    <p>Frekuensi badai, banjir, dan kekeringan meningkat</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon">🌊</div>
+                    <h4>Naiknya Permukaan Laut</h4>
+                    <p>Ancaman bagi kota-kota pesisir dan pulau kecil</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kalkulator Emisi Personal -->
+        <div class="calculator-section">
+            <h3>Hitung Jejak Digital-mu!</h3>
+            <div class="calculator">
+                <div class="calculator-input">
+                    <label for="email-count">Jumlah Email per Hari:</label>
+                    <input type="number" id="email-count" min="0" value="10">
+                </div>
+                <div class="calculator-input">
+                    <label for="streaming-hours">Jam Streaming per Hari:</label>
+                    <input type="number" id="streaming-hours" min="0" step="0.5" value="2">
+                </div>
+                <div class="calculator-input">
+                    <label for="video-call-hours">Jam Video Call per Hari:</label>
+                    <input type="number" id="video-call-hours" min="0" step="0.5" value="1">
+                </div>
+                <button id="calculate-btn" class="cta-button">Hitung Jejak Karbon</button>
+                <div id="calculator-result" class="calculator-result">
+                    <p>Jejak karbon digital Anda: <span id="carbon-result">0</span> kg CO₂ per tahun</p>
+                    <p>Setara dengan <span id="tree-equivalent">0</span> pohon yang dibutuhkan untuk menyerapnya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Digital Wall Section -->
+      <section id="wall">
+        <div class="container">
+            <div class="notes-board">
+                <div class="board-header">
+                    <h2>D’Grent Board</h2>
+                    <div class="board-controls">
+                        <button class="control-btn" id="shuffle-notes">
+                            <i class="fas fa-random"></i> Acak Posisi
+                        </button>
+                        <button class="control-btn" id="clear-notes">
+                            <i class="fas fa-trash"></i> Hapus Semua
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="notes-container" id="notes-container">
+                    <!-- Notes will be dynamically added here -->
+                </div>
+            </div>
+            
+            <div class="note-form-container">
+                <h3>Bagikan Aksi D’grent-mu!</h3>
+                <p class="form-intro">Setiap aksi dimulai dari satu tulisan kecil. Tempelkan milikmu di sini.</p>
+                
+                <form id="note-form">
+                    <div class="form-group">
+                        <input type="text" id="note-title" placeholder="Judul catatan Anda..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="note-content" placeholder="Tulis pesan Anda di sini... Bagikan harapan, dukungan, atau pemikiran untuk kampanye ini." required></textarea>
+                    </div>
+                    
+                    <div class="form-controls">
+                        <div class="color-picker">
+                            <span>Warna:</span>
+                            <div class="color-options">
+                                <div class="color-option active" style="background-color: #FFD166;" data-color="#FFD166"></div>
+                                <div class="color-option" style="background-color: #06D6A0;" data-color="#06D6A0"></div>
+                                <div class="color-option" style="background-color: #118AB2;" data-color="#118AB2"></div>
+                                <div class="color-option" style="background-color: #EF476F;" data-color="#EF476F"></div>
+                                <div class="color-option" style="background-color: #9B5DE5;" data-color="#9B5DE5"></div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-sticky-note"></i> Tempelkan Catatan
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Website Section -->
+    <section id="tentang" class="section">
+        <div class="container">
+            <h2 class="section-title">Tentang Website Ini</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Mengapa Website Ini Hemat Data?</h3>
+                    <p>Kami merancang website D'Grent dengan prinsip hemat data untuk mengurangi jejak karbon digital:</p>
+                    <ul>
+                        <li>Menggunakan gambar vektor sederhana daripada foto berat</li>
+                        <li>Mengoptimalkan kode untuk ukuran file yang minimal</li>
+                        <li>Tidak menggunakan library eksternal yang besar</li>
+                        <li>Mengurangi animasi yang tidak perlu</li>
+                        <li>Menyimpan data lokal di browser pengguna</li>
+                    </ul>
+                    <p>Dengan desain yang efisien, website ini hanya menggunakan sebagian kecil dari sumber daya server dibandingkan website konvensional.</p>
+                </div>
+                <div class="eco-meter">
+                    <h3>Efisiensi Website Ini</h3>
+                    <div class="meter-container">
+                        <div class="meter-bar">
+                            <div class="meter-fill" id="eco-meter"></div>
+                        </div>
+                        <div class="meter-labels">
+                            <span>Website Biasa</span>
+                            <span>Website D'Grent</span>
+                        </div>
+                    </div>
+                    <p class="meter-description">Website D'Grent menggunakan <strong>70% lebih sedikit</strong> sumber daya server dibandingkan website rata-rata.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">D'GRENT</div>
+                <p>Digital + Green + Internet</p>
+                <p>Kampanye untuk meningkatkan kesadaran tentang polusi digital</p>
+                <p class="footer-note">Website ini dirancang untuk hemat data dan ramah lingkungan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
